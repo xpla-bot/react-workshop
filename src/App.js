@@ -4,20 +4,16 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <p className="title">Limitations:</p>
-        <ul>
-          <li>Although React components can manage state (i.e. data), it’s tools are limited. <b>Redux</b> is the most well-known <b>state management library</b> for React, it’s practically the default choice, but there are other well-supported libraries, too.</li>
-          <li>
-            React comes with neither a router nor AJAX capabilities. It’s focus is solely on rendering an interface quickly and efficiently. The default libraries for these are:
-            <ul>
-              <li><b>Router:</b> React Router</li>
-              <li><b>AJAX:</b> fetch polyfill, or Axios.</li>
-            </ul>
-          </li>
-          <li>No built-in <b>form creation and validation</b> tools</li>
-          <li>No enforced <b>conventions</b> for app structure</li>
-        </ul>
-        <p className="note">Although the above are noted as <em>limitations</em>, they can also be thought of as providing <em>freedom</em> to choose your own solutions.</p>
+        <p className="title">Create React App:</p>
+        <p>Getting a React project started used to be a difficult endeavor, arguably more difficult than building the indended app!</p>
+        <p>The Facebook team recognized this obstacle to using React, and developed a Command Line Interface (CLI) to make starting a React project dead simple.</p>
+        <p>If you haven't done so yet, open your terminal and:</p>
+        <pre>npm install -g create-react-app</pre>
+        <p>to install create-react-app globally.</p>
+        <hr />
+        <p>When you have create-react-app installed, navigate to where you want your project to appear and:</p>
+        <pre>create-react-app shopping-app</pre>
+        <p>This will create a 'shopping-app' directory with a React starter project.</p>
       </div>
     );
   }
