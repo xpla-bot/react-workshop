@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+// 1/ import the Contact component
+import Contact from './Contact';
 import './style.css';
 
+// Mount the Contact component to the DOM.
 ReactDOM.render(
-  <App />,
+  <Contact />,
   document.getElementById('root')
 );
