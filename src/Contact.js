@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-// 1/ Import Avatar
 import Avatar from './Avatar';
+// /1 Import the ContactInfo component
+import ContactInfo from './ContactInfo';
 
 class Contact extends Component {
 
@@ -8,17 +9,15 @@ class Contact extends Component {
     return (
       <div className="media">
         <div className="media-body">
-          {/* /2 Avatar component */}
           <Avatar
             img_src="https://randomuser.me/api/portraits/med/men/85.jpg" />
 
           <div classnName="middle">
-
-            <div className="contact-details">
-              <h4 className="media-heading">Jerry Jennings</h4>
-              <p><i className="fa fa-envelope-o"></i>jennings@gmail.com</p>
-              <p><i className="fa fa-phone"></i>(999) 555-6767</p>
-            </div>
+            {/* 4/ Use the ContactInfo component and pass it props */}
+            <ContactInfo
+              contactName="Jerry Jennings"
+              email="jennings@gmail.com"
+              phone="(999) 555-6767"/>
 
             <div className="rating">
               <i className="fa fa-star"></i>

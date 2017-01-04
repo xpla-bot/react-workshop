@@ -69,7 +69,7 @@ pre {
 .middle {
   flex: 2;
 }
-.contact-details p i {
+.contact-info p i {
   margin-right: 10px;
   color: #888;
   font-size: 18px;
@@ -102,12 +102,12 @@ pre {
 
 .media,
 .avatar,
-.contact-details,
+.contact-info,
 .rating {
   border: 3px solid red;
 }
 .avatar,
-.contact-details,
+.contact-info,
 .rating {
   margin: 3px;
 }
