@@ -95,3 +95,8 @@ pre {
     text-align: center;
   }
 }
+
+.media-left, .contact-details,.rating {
+  border: 3px solid red;
+  margin: 3px;
+}
