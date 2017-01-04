@@ -52,6 +52,7 @@ pre {
 
 .media-left {
   padding-right: 30px;
+  flex: 1
 }
 
 .media-header {
@@ -60,16 +61,19 @@ pre {
 
 .media-body {
   max-width: 100%;
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: auto;
 }
-
-.media-body p i {
+.middle {
+  flex: 2;
+}
+.contact-details p i {
   margin-right: 10px;
   color: #888;
   font-size: 18px;
 }
-
 .rating i {
   margin-right: 5px;
   font-size: 16px;
@@ -96,7 +100,14 @@ pre {
   }
 }
 
-.media-left, .contact-details,.rating {
+.media,
+.avatar,
+.contact-details,
+.rating {
   border: 3px solid red;
+}
+.avatar,
+.contact-details,
+.rating {
   margin: 3px;
 }
