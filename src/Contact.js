@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Avatar from './Avatar';
 import ContactInfo from './ContactInfo';
-// /1 Import the Rating Component
 import Rating from './Rating';
 
 class Contact extends Component {
@@ -19,7 +18,7 @@ class Contact extends Component {
               contactName="Jerry Jennings"
               email="jennings@gmail.com"
               phone="(999) 555-6767"/>
-            {/* 1/ Implement the Rating component, we'll add logic to this soon */}
+
             <Rating />
 
           </div>

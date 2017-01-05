@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 class Rating extends Component {
-  // /10 We'll add logic later to determine how many stars should show
   render() {
     return (
       <div className="rating">
