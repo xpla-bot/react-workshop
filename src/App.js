@@ -1,20 +1,29 @@
 import React, { Component } from 'react';
 import ContactList from './ContactList';
-// add axios to project: 'npm install axios --save'
-// 1/ import axios for use in component
 import axios from 'axios';
 
 class App extends Component {
-  // 11/ this hook is called after comp. is mounted to DOM
+  constructor() {
+    // 1/ super creates 'this' is constructor
+    super();
+// 3/  constructor is the ONLY place to assign state with '='
+    this.state = {
+      users: []
+    }
+    // to change state elsewhere use this.setState();
+  }
   componentDidMount() {
     axios.get('./users.json')
       .then(res => {
-        // 1/ axios returns 6 properties
         console.log(res);
-        // 3/ the users are in the 'data' property
+        // 3/ Outside of contstructor use this.setState()
         this.setState({
           users: res.data
         })
+// this.setState makes React check for DOM changes
+// if new state changes how DOM should appear,
+// then React implements a re-render of JUST the
+// DOM branch that needs re-rendering
       })
   }
   render() {
