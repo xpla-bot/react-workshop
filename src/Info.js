@@ -1,24 +1,15 @@
 import React, { Component } from 'react';
 
 class Info extends Component {
-  constructor() {
-    super();
-    this.state = {
-      string: '<ContactList contacts={this.state.users} />'
-    }
-  }
   render() {
     return (
       <div className="container">
-        <p>React uses two data types: State and Props.</p>
-        <ul>
-          <li><b>State</b>, as we have seen, is mutable. E.g. this.setState()</li>
-          <li><b>Props</b> are immutable. Assigning a value to them will cause an error.</li>
-        </ul>
-        <p>We are now using props to pass data from App to ContactList.</p>
-        <p>Props look like HTML attributes in the parent component file.</p>
-        <pre style={{marginLeft: 20}}>{this.state.string}</pre>
-        <p>Let’s look at a set of slides that enumerate important differences between state and props.</p>
+        <p className="title">Waiting For Data: Ternary Operators</p>
+          <p>Before we start using data in our component, we have to ensure the data is retrieved.</p>
+          <p>A very common React error occurs when you app renders on the assumption that the app has data, but the data hasn’t yet returned from the AJAX call.</p>
+          <p>In React, this is usually solved by using <b>ternary operators</b>.</p>
+          <p>We can use curly braces to execute JavaScript in the JSX of our render method. We can write a ternay between curly braces in our App components.</p>
+          <p>Before we look at the new code in App.js let's look at a slide that breaks down the elements of a ternary.</p>
       </div>
     );
   }

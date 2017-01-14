@@ -9,10 +9,11 @@ class Contact extends Component {
     return (
       <div className="media">
         <div className="media-body">
+
           <Avatar
             img_src="https://randomuser.me/api/portraits/med/men/85.jpg" />
 
-          <div classnName="middle">
+          <div className="middle">
 
             <ContactInfo
               contactName="Jerry Jennings"

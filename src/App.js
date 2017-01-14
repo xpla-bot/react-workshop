@@ -19,11 +19,14 @@ class App extends Component {
       })
   }
   render() {
-    // The ContactList is taking in the state of App as props
-    // 3/ & will be 'this.props.contacts' inside ContactList
     return (
-      <ContactList
-        contacts={this.state.users} />
+      <div>
+        {this.state.users.length
+          ? <ContactList
+                contacts={this.state.users} />
+          : <h1>Loading data...</h1>}
+      </div>
+
     );
   }
 }

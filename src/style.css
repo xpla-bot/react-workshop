@@ -66,6 +66,10 @@ pre {
   align-items: center;
   margin: auto;
 }
+
+.media-body .avatar {
+  flex: 1;
+}
 .middle {
   flex: 2;
 }
