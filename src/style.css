@@ -89,6 +89,11 @@ pre {
   font-size: 30px;
   color: #78909C;
   cursor: pointer;
+  transition: .4s;
+}
+.group i:hover {
+  color: #FF9800;
+  transition: .4s;
 }
 
 @media screen and (max-width: 600px) {

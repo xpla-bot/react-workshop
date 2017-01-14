@@ -6,14 +6,12 @@ import Rating from './Rating';
 class Contact extends Component {
 
   render() {
-// to save us from typing this.props.contactData over and over
-// we can save this to a constant
     const contact = this.props.contactData;
 
     return (
       <div className="media">
         <div className="media-body">
-{/* 2/ Using props works! Use dot notation to access data */}
+
           <Avatar
             img_src={contact.picture.large} />
 
