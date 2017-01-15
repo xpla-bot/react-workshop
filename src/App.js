@@ -27,7 +27,7 @@ class App extends Component {
         {this.state.users.length
           ? <ContactList
                 contacts={this.state.users} />
-          : <h1>Loading data...</h1>}
+          : <h1 className="loading">Loading data...</h1>}
       </div>
     );
   }

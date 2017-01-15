@@ -3,6 +3,10 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+.loading {
+  text-align: center;
+  margin-top: 30vh;
+}
 .container {
   padding: 20px;
   margin: 50px auto;

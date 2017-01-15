@@ -5,16 +5,17 @@ class ContactList extends Component {
   render() {
     return (
       <div>
-{/*    use Array.map() to map over data and return */}
-{/* 4/ one Contact for every item in the array */}
+{/*    To help React keep track of DOM changes, each */}
+{/* 5/ iterable needs a UNIQUE key prop. */}
         {this.props.contacts.map(contact => {
           return <Contact
+                    key={contact.id.value}
                     contactData={contact}/>;
         })}
       </div>
     );
-// PROBLEM: in the browser console there is a key warning
-// More on this next.
+// With the key prop, React can efficiently detect DOM changes
+// even when there are THOUSANDS of DOM nodes on a webpage.
   }
 }
 
