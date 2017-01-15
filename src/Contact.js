@@ -7,9 +7,12 @@ class Contact extends Component {
 
   render() {
     const contact = this.props.contactData;
-
+//     Finally, attach use selectedContact prop within
+// 4/  React' onClick event handler
     return (
-      <div className="media">
+      <div
+        className="media"
+        onClick={() => this.props.selectContact(contact)}>
         <div className="media-body">
 
           <Avatar

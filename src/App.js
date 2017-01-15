@@ -6,26 +6,40 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      users: []
+      users: [],
+      selectedContact: null
     }
+//    Bind all class methods in the constructor
+//    In this case, need the 'this' of this.setState
+// 1/ to refer to App (our container component)
+    this.handleSelectContact = this.handleSelectContact.bind(this);
   }
   componentDidMount() {
     axios.get('./users.json')
       .then(res => {
-//    When AJAX returns, state is set.
-//    Using this.setState() makes React checks to see
-// 3/ if the DOM need to be re-rendered.
         this.setState({
           users: res.data
         })
       })
   }
+  //    'handleSelectContact' will be pass from
+  //    App --> ContactList
+  //    ContactList --> ContactList
+  // 1/ attached to HTML inside of Contact
+  handleSelectContact(contact) {
+    this.setState({
+      selectedContact: contact
+    }, () => {
+      console.log('selected: ', this.state.selectedContact);
+    })
+  }
   render() {
-// 8/ Only render ContactList if users are in state.
+// 9/ Pass 'handleSelectContact' down as a prop
     return (
       <div>
         {this.state.users.length
           ? <ContactList
+                selectContact={this.handleSelectContact}
                 contacts={this.state.users} />
           : <h1 className="loading">Loading data...</h1>}
       </div>
