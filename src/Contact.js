@@ -6,9 +6,9 @@ import Rating from './Rating';
 class Contact extends Component {
 
   render() {
+
     const contact = this.props.contactData;
-//     Finally, attach use selectedContact prop within
-// 4/  React' onClick event handler
+
     return (
       <div
         className="media"

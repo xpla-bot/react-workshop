@@ -3,7 +3,6 @@ import Contact from './Contact';
 
 class ContactList extends Component {
   render() {
-// 9/ Pass 'handleSelectContact' down as a prop again
     return (
       <div>
         {this.props.contacts.map(contact => {
