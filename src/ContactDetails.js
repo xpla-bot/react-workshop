@@ -3,12 +3,6 @@ import Avatar from './Avatar';
 
 class ContactDetails extends Component {
   render() {
-    //    ES5 way: var contact = this.props.contact;
-
-    //    ES6 way:
-    //    Object destructuring pulls the property
-    //    'contact' out of this.props as a constant
-    // 1/ with the same name
     const { contact } = this.props;
 
     return (
