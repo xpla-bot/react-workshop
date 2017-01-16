@@ -28,9 +28,11 @@ class Contact extends Component {
             <Rating />
 
           </div>
-
           <div className="group">
-            <i className="fa fa-address-card-o"></i>
+              {/* 3/ add group toggle func to onClick */}
+            <i
+              onClick={() => this.props.toggleGroupInclusion(contact)}
+              className="fa fa-address-card-o"></i>
           </div>
         </div>
       </div>
