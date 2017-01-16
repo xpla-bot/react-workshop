@@ -30,25 +30,39 @@ class App extends Component {
       console.log('selected: ', this.state.selectedContact);
     })
   }
-//     This shows rendering the List and Details
-//     using ternary operators in the render method.
-// 20/ Also added Bootstrap grid classes
+
+//     Take logic out of the render method by creating
+//     functions that contain the logic, and then call
+// 18/ the functions from within the render method.
+  renderContactList() {
+    if (this.state.users.length) {
+      return <ContactList
+                selectContact={this.handleSelectContact}
+                contacts={this.state.users} />;
+    } else {
+      return <h1 className="loading">Loading data...</h1>;
+    }
+  }
+
+  renderContactDetails() {
+    if (this.state.selectedContact) {
+      return <ContactDetails
+                contact={this.state.selectedContact} />;
+    } else {
+      return <h1 className="loading">Select a contact</h1>;
+    }
+  }
+
   render() {
+// 12/ Call the two new functions from within render()
     return (
       <div className="container-fluid">
         <div className="row">
           <div className="col-sm-6">
-            {this.state.users.length
-              ? <ContactList
-                    selectContact={this.handleSelectContact}
-                    contacts={this.state.users} />
-              : <h1 className="loading">Loading data...</h1>}
+            {this.renderContactList()}
           </div>
           <div className="col-sm-6">
-            {this.state.selectedContact
-              ? <ContactDetails
-                    contact={this.state.selectedContact} />
-              : <h1 className="loading">Select a contact</h1>}
+            {this.renderContactDetails()}
           </div>
         </div>
       </div>
