@@ -7,15 +7,11 @@ class App extends Component {
 
   constructor() {
     super();
-// 5/ Added an empty array to GROUP
     this.state = {
       users: [],
-      selectedContact: null,
-      group: []
+      selectedContact: null
     }
     this.handleSelectContact = this.handleSelectContact.bind(this);
-// 1/ Bind grouping func to ensure 'this' refers to App's 'this'
-    this.handleGroupListInclusion = this.handleGroupListInclusion.bind(this);
   }
 
   componentDidMount() {
@@ -30,29 +26,17 @@ class App extends Component {
   handleSelectContact(contact) {
     this.setState({
       selectedContact: contact
+    }, () => {
+      console.log('selected: ', this.state.selectedContact);
     })
   }
 
-// 13/ Create function that adds or removes contact
-  handleGroupListInclusion(contact) {
-
-    if( this.state.group.includes(contact) ) {
-      this.setState({
-        group: this.state.group.filter(c => c.id.value !== contact.id.value)
-      })
-    } else {
-      this.setState({
-        group: [contact, ...this.state.group]
-      })
-    }
-
-  }
-
+//     Take logic out of the render method by creating
+//     functions that contain the logic, and then call
+// 18/ the functions from within the render method.
   renderContactList() {
     if (this.state.users.length) {
-  // 2/ pass grouping function to ContactList
       return <ContactList
-                toggleGroupInclusion={this.handleGroupListInclusion}
                 selectContact={this.handleSelectContact}
                 contacts={this.state.users} />;
     } else {
@@ -70,6 +54,7 @@ class App extends Component {
   }
 
   render() {
+// 12/ Call the two new functions from within render()
     return (
       <div className="container-fluid">
         <div className="row">
