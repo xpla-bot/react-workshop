@@ -3,6 +3,7 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
 .loading {
   text-align: center;
   margin-top: 30vh;
@@ -121,6 +122,27 @@ pre {
 .group i:hover {
   color: #FF9800;
   transition: .4s;
+}
+
+.group-icon-container,
+.group-icon {
+  display: flex;
+}
+
+.group-icon-container {
+  flex-direction: row-reverse;
+  margin-bottom: 15px;
+}
+
+.group-icon i {
+  font-size: 40px;
+  color: #78909C;
+  cursor: pointer;
+}
+
+.group-icon .badge {
+  background-color: #FF9800;
+  align-self: flex-start;
 }
 
 @media screen and (max-width: 600px) {

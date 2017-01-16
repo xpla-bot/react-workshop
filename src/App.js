@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 import ContactList from './ContactList';
 import ContactDetails from './ContactDetails';
+// 1/ import GroupIcon
+import GroupIcon from './GroupIcon';
 import axios from 'axios';
 
 class App extends Component {
 
   constructor() {
     super();
-// 5/ Added an empty array to GROUP
     this.state = {
       users: [],
       selectedContact: null,
       group: []
     }
     this.handleSelectContact = this.handleSelectContact.bind(this);
-// 1/ Bind grouping func to ensure 'this' refers to App's 'this'
     this.handleGroupListInclusion = this.handleGroupListInclusion.bind(this);
   }
 
@@ -33,7 +33,6 @@ class App extends Component {
     })
   }
 
-// 13/ Create function that adds or removes contact
   handleGroupListInclusion(contact) {
 
     if( this.state.group.includes(contact) ) {
@@ -50,7 +49,6 @@ class App extends Component {
 
   renderContactList() {
     if (this.state.users.length) {
-  // 2/ pass grouping function to ContactList
       return <ContactList
                 toggleGroupInclusion={this.handleGroupListInclusion}
                 selectContact={this.handleSelectContact}
@@ -70,8 +68,10 @@ class App extends Component {
   }
 
   render() {
+  // 3/ Add GroupIcon to App's render method
     return (
       <div className="container-fluid">
+        <GroupIcon group={this.state.group} />
         <div className="row">
           <div className="col-sm-6">
             {this.renderContactList()}
