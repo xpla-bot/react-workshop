@@ -7,6 +7,7 @@ class ContactList extends Component {
       <div>
         {this.props.contacts.map(contact => {
           return <Contact
+                    showButton={this.props.button}
                     toggleGroupInclusion={this.props.toggleGroupInclusion}
                     selectContact={this.props.selectContact}
                     key={contact.id.value}

@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 
+import { Link } from 'react-router';
+
 class GroupIcon extends Component {
   render() {
     return (
       <div className="group-icon-container">
-        <div className="group-icon">
+{/* Wrapped icon & badge in router's Link tag, & added a to="/group" */}
+        <Link className="group-icon" to="/group">
           <i className="fa fa-users"></i>
           <span className="badge">{this.props.group.length}</span>
-        </div>
+        </Link>
       </div>
     );
   }

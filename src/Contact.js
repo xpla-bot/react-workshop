@@ -8,7 +8,6 @@ class Contact extends Component {
   render() {
 
     const contact = this.props.contactData;
-
     return (
       <div
         className="media"
@@ -28,11 +27,14 @@ class Contact extends Component {
             <Rating />
 
           </div>
-          <div className="group">
-            <i
-              onClick={() => this.props.toggleGroupInclusion(contact)}
-              className="fa fa-address-card-o"></i>
-          </div>
+{/* 7/ Added logic to show/hide button based on prop */}
+          {this.props.showButton
+            ? <div className="group">
+                <i
+                  onClick={() => this.props.toggleGroupInclusion(contact)}
+                  className="fa fa-address-card-o"></i>
+              </div>
+            : null}
         </div>
       </div>
     );
