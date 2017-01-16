@@ -4,7 +4,7 @@ import ContactDetails from './ContactDetails';
 import GroupIcon from './GroupIcon';
 import axios from 'axios';
 
-class App extends Component {
+class MainView extends Component {
 
   constructor() {
     super();
@@ -83,4 +83,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default MainView;
