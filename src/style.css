@@ -134,7 +134,8 @@ pre {
   margin-bottom: 15px;
 }
 
-.group-icon i {
+.group-icon i,
+.group-page .back-btn i {
   font-size: 40px;
   color: #78909C;
   cursor: pointer;
@@ -143,6 +144,9 @@ pre {
 .group-icon .badge {
   background-color: #FF9800;
   align-self: flex-start;
+}
+.group-page h1 {
+  text-align: center;
 }
 
 @media screen and (max-width: 600px) {

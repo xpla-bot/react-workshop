@@ -5,14 +5,12 @@ import MainView from './MainView';
 import GroupView from './GroupView';
 import './style.css';
 
-// 5/ Add a functional component for 'not found' urls
 const NotFound = () => {
   return(
     <h1>Page Not Found!</h1>
   )
 }
 
-// 10/ Added a Miss component to catch all other urls
 const Routes = () => {
   return (
     <BrowserRouter>

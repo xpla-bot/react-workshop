@@ -27,7 +27,6 @@ class Contact extends Component {
             <Rating />
 
           </div>
-{/* 7/ Added logic to show/hide button based on prop */}
           {this.props.showButton
             ? <div className="group">
                 <i

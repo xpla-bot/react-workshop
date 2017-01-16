@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ContactList from './ContactList';
-// 1/ npm install localforage --save and then import it
 import localforage from 'localforage';
+import { Link } from 'react-router';
 
 class GroupView extends Component {
   constructor() {
@@ -11,7 +11,6 @@ class GroupView extends Component {
     }
   }
   componentDidMount() {
-// Grab group from offline browser memeory
     localforage.getItem('contactGroup')
       .then(contactGroup => {
         if(contactGroup) {
@@ -22,9 +21,13 @@ class GroupView extends Component {
       })
   }
   render() {
-// 7/ Reuse ContactList. Added prop for show/hide button
     return (
-      <div>
+      <div className="container group-page">
+        <div className="back-btn">
+          <Link to="/">
+            <i className="fa fa-arrow-circle-o-left"></i>
+          </Link>
+        </div>
         {this.state.group.length
           ? <ContactList
               button={false}

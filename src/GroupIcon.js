@@ -6,7 +6,6 @@ class GroupIcon extends Component {
   render() {
     return (
       <div className="group-icon-container">
-{/* Wrapped icon & badge in router's Link tag, & added a to="/group" */}
         <Link className="group-icon" to="/group">
           <i className="fa fa-users"></i>
           <span className="badge">{this.props.group.length}</span>
