@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ContactList from './ContactList';
 import ContactDetails from './ContactDetails';
-// 1/ import GroupIcon
 import GroupIcon from './GroupIcon';
 import axios from 'axios';
 
@@ -68,7 +67,6 @@ class App extends Component {
   }
 
   render() {
-  // 3/ Add GroupIcon to App's render method
     return (
       <div className="container-fluid">
         <GroupIcon group={this.state.group} />
